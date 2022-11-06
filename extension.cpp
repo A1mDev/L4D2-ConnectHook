@@ -30,6 +30,7 @@
  */
 
 #include <isteamutils.h>
+
 #undef DLL_EXPORT
 #include <netadr.h>
 
@@ -147,13 +148,13 @@ const char *CSteamID::Render() const // renders this steam ID to string
 {
 	static char szSteamID[64];
 
-	switch(m_EAccountType)
+	switch (m_steamid.m_comp.m_EAccountType)
 	{
 	case k_EAccountTypeInvalid:
 	case k_EAccountTypeIndividual:
 		g_pSM->Format(szSteamID, sizeof(szSteamID), "STEAM_%u:%u:%u", 
-			m_EUniverse,
-			(m_unAccountID % 2) ? 1 : 0, (uint32)m_unAccountID/2
+			m_steamid.m_comp.m_EUniverse,
+			(m_steamid.m_comp.m_unAccountID % 2) ? 1 : 0, (uint32)m_steamid.m_comp.m_unAccountID / 2
 		);
 		break;
 	default:
