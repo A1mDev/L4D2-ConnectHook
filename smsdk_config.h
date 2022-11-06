@@ -40,9 +40,9 @@
 /* Basic information exposed publicly */
 #define SMEXT_CONF_NAME			"ConnectHook"
 #define SMEXT_CONF_DESCRIPTION	"Allow hook pre connection event"
-#define SMEXT_CONF_VERSION		"1.0.0"
-#define SMEXT_CONF_AUTHOR		"spumer"
-#define SMEXT_CONF_URL			"http://zo-zo.org/"
+#define SMEXT_CONF_VERSION		"1.1"
+#define SMEXT_CONF_AUTHOR		"spumer, A1m`"
+#define SMEXT_CONF_URL			"https://github.com/A1mDev/L4D2-ConnectHook"
 #define SMEXT_CONF_LOGTAG		"ConnectHook"
 #define SMEXT_CONF_LICENSE		"GPL"
 #define SMEXT_CONF_DATESTRING	__DATE__
