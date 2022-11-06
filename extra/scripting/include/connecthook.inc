@@ -1,5 +1,5 @@
 #if defined _connecthook_included
- #endinput
+	#endinput
 #endif
 #define _connecthook_included
 
@@ -12,13 +12,12 @@
  * @param steamID       Client's SteamId.  (This is before authentication so it is not guaranteed.)
  * @param rejectReason  Client's connection reject reason. Will be used only if returned action is Plugin_Handled or above.
  */
-forward Action:OnClientPreConnect(const String:name[], const String:password[], const String:ip[], const String:steamID[], String:rejectReason[255]);
-
+forward Action OnClientPreConnect(const char[] sName, const char[] sPassword, const char[] sIp, const char[] sSteamID, char sRejectReason[255]);
 
 /**
  * Do not edit below this line!
  */
-public Extension:__ext_connecthook =
+public Extension __ext_connecthook =
 {
 	name = "ConnectHook",
 	file = "connecthook.ext",
